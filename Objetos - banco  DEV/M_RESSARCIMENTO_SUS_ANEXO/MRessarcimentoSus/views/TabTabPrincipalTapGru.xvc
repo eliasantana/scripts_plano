@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:a="urn:schemas:morphis:frames:addition" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="RESSARCIMENTO_SUS"/>
+	<panel a:scrollvertical="on" name="TAP_GRU" style="ui-content-full">
+		<panel a:scrollhorizontal="on" bottom="10px" left="10px" right="10px" style="ui-box-vertical" top="10px">
+			<flowlayout orientation="vertical">
+				<panel a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="10px" style="ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="String" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dsOficioGru.label" labelalign="start" labelposition="top" member="DS_OFICIO_GRU" name="dsOficioGru" width="250px"/>
+						<calendar block="RESSARCIMENTO_SUS" datatype="Date" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dtGru.label" labelalign="start" labelposition="top" maxlength="1" member="DT_GRU" name="dtGru" style="MVDataCompleta" width="120px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.nrGru.label" labelalign="start" labelposition="top" maxlength="22" member="NR_GRU" name="nrGru" textalign="right" width="360px"/>
+					</flowlayout>
+				</panel>
+				<panel a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="10px" style="ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.nrDocGru.label" labelalign="start" labelposition="top" maxlength="22" member="NR_DOC_GRU" name="nrDocGru" textalign="right" width="250px"/>
+						<calendar block="RESSARCIMENTO_SUS" datatype="Date" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dtEmissao.label" labelalign="start" labelposition="top" maxlength="1" member="DT_EMISSAO" name="dtEmissao" style="MVDataCompleta" width="120px"/>
+						<calendar block="RESSARCIMENTO_SUS" datatype="Date" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dtVencimento.label" labelalign="start" labelposition="top" maxlength="1" member="DT_VENCIMENTO" name="dtVencimento" style="MVDataCompleta" validation="server" width="120px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.vlGru.label" labelalign="start" labelposition="top" maxlength="10" member="VL_GRU" name="vlGru" style="MVMask466" textalign="right" validation="server" visible="false" width="120px"/>
+					</flowlayout>
+				</panel>
+				<panel a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="10px" style="ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<lovbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.cdTipDoc.label" labelalign="start" labelposition="top" maxlength="2" member="CD_TIP_DOC" name="cdTipDoc" textalign="right" validation="server" width="60px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="String" enabled="false" height="22px" member="DSP_TIP_DOC" name="dspTipDoc" readonly="true" width="183px"/>
+						<lovbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.cdFornecedor.label" labelalign="start" labelposition="top" maxlength="6" member="CD_FORNECEDOR" name="cdFornecedor" textalign="right" validation="server" width="60px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="String" enabled="false" height="22px" member="DSP_NM_FORNECEDOR" name="dspFornecedor" readonly="true" width="232px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.cdConPag.label" labelalign="start" labelposition="top" member="CD_CON_PAG" name="cdConPag" textalign="right" tooltip="mRessarcimentoSus.ressarcimentoSus.cdConPag.tooltip" width="76px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspCdConPagDefinitiva.label" labelalign="start" labelposition="top" member="DSP_CD_CON_PAG_DEFINITIVA" name="dspCdConPagDefinitiva" textalign="right" tooltip="mRessarcimentoSus.ressarcimentoSus.dspCdConPagDefinitiva.tooltip" width="100px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.cdFaturaGru.label" labelalign="start" labelposition="top" member="CD_FATURA_GRU" name="cdFaturaGru" textalign="right" visible="false" width="100px"/>
+						<button action="btn_con_pag_click" block="CONTROLE" label="mRessarcimentoSus.controle.btnConPag.label" member="BTN_CON_PAG" name="btnConPag" width="150px"/>
+					</flowlayout>
+				</panel>
+				<panel a:paddingbottom="10px" style="ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<framepanel label="mRessarcimentoSus.uiResourceKey.1.title" style="MVTituloDescricao" height="200px" width="100%">
+							<panel style="ui-box-vertical ui-content-full-width">
+								<flowlayout orientation="vertical">
+									<panel a:gaphorizontal="20px" a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="20px" height="100%" style="ui-box-horizontal" width="100%">
+										<flowlayout orientation="horizontal">
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspNrReembolsosC.label" labelalign="start" labelposition="top" member="DSP_NR_REEMBOLSOS_C" name="dspNrReembolsosC" textalign="right" width="100px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoCobradoC.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_COBRADO_C" name="dspVlReembolsoCobradoC" style="MVMask025" textalign="right" width="145px"/>
+											<textbox backgroundcolor="#87BD58" block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoPagarC.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_PAGAR_C" name="dspVlReembolsoPagarC" style="MVMask025" textalign="right" width="145px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoGlosadoC.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_GLOSADO_C" name="dspVlReembolsoGlosadoC" style="MVMask025" textalign="right" width="145px"/>
+										</flowlayout>
+									</panel>
+									<panel a:gaphorizontal="20px" a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="20px" height="100%" style="ui-box-horizontal" width="100%">
+										<flowlayout orientation="horizontal">
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspNrReembolsosE.label" labelalign="start" labelposition="top" member="DSP_NR_REEMBOLSOS_E" name="dspNrReembolsosE" textalign="right" width="100px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoCobradoE.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_COBRADO_E" name="dspVlReembolsoCobradoE" style="MVMask025" textalign="right" width="145px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoPagarE.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_PAGAR_E" name="dspVlReembolsoPagarE" style="MVMask025" textalign="right" width="145px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoGlosadoE.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_GLOSADO_E" name="dspVlReembolsoGlosadoE" style="MVMask025" textalign="right" width="145px"/>
+										</flowlayout>
+									</panel>
+									<panel a:gaphorizontal="20px" a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="10px" height="100%" style="ui-box-horizontal" width="100%">
+										<flowlayout orientation="horizontal">
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspNrReembolsosN.label" labelalign="start" labelposition="top" member="DSP_NR_REEMBOLSOS_N" name="dspNrReembolsosN" textalign="right" width="100px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoCobradoN.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_COBRADO_N" name="dspVlReembolsoCobradoN" style="MVMask025" textalign="right" width="145px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoPagarN.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_PAGAR_N" name="dspVlReembolsoPagarN" style="MVMask025" textalign="right" width="145px"/>
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspVlReembolsoGlosadoN.label" labelalign="start" labelposition="top" member="DSP_VL_REEMBOLSO_GLOSADO_N" name="dspVlReembolsoGlosadoN" style="MVMask025" textalign="right" width="145px"/>
+										</flowlayout>
+									</panel>
+									<framepanel height="70px" width="100%">
+										<panel a:gaphorizontal="20px" a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="5px" height="100%" style="ui-box-horizontal" width="100%">
+											<flowlayout orientation="horizontal">
+												<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" member="DSP_NR_REEMBOLSOS" name="dspNrReembolsos" textalign="right" width="100px"/>
+												<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" member="DSP_VL_REEMBOLSO_COBRADO" name="dspVlReembolsoCobrado" style="MVMask025" textalign="right" width="145px"/>
+												<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" member="DSP_VL_REEMBOLSO_PAGAR" name="dspVlReembolsoPagar" style="MVMask025" textalign="right" width="145px"/>
+												<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" member="DSP_VL_REEMBOLSO_GLOSADO" name="dspVlReembolsoGlosado" style="MVMask025" textalign="right" width="145px"/>
+											</flowlayout>
+										</panel>
+									</framepanel>
+								</flowlayout>
+							</panel>
+						</framepanel>
+					</flowlayout>
+				</panel>
+			</flowlayout>
+		</panel>
+	</panel>
+</config>

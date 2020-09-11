@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="RESSARCIMENTO_SUS_ANEXO.Manager.Config" name="DBAPS.RESSARCIMENTO_SUS_ANEXO">
+		<items>
+			<item name="CD_RESSARCIMENTO_SUS_ANEXO" logicalName="cdRessarcimentoSusAnexo" type="java.math.BigDecimal" physicalName="CD_RESSARCIMENTO_SUS_ANEXO" key="true">
+				<value>
+					<sequence>DBAPS.SEQ_RESSARCIMENTO_SUS_ANEXO</sequence>
+				</value>
+			</item>
+			<item name="CD_RESSARCIMENTO_SUS" logicalName="cdRessarcimentoSus" type="java.math.BigDecimal" physicalName="CD_RESSARCIMENTO_SUS">
+			</item>
+			<item name="DS_ARQUIVO" logicalName="dsArquivo" type="java.lang.String" physicalName="DS_ARQUIVO">
+			</item>
+			<item name="CD_USUARIO_INCLUSAO" logicalName="cdUsuarioInclusao" type="java.lang.String" physicalName="CD_USUARIO_INCLUSAO">
+			</item>
+			<item name="DT_INCLUSAO" logicalName="dtInclusao" type="java.util.Date" physicalName="DT_INCLUSAO">
+			</item>
+			<item name="DSP_NM_USUARIO" logicalName="dspNmUsuario" type="java.lang.String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.model.RessarcimentoSusAnexoAdapter</adapterClass>
+		
+		<defaultOrderByClause><![CDATA[CD_RESSARCIMENTO_SUS_ANEXO]]></defaultOrderByClause>
+		
+		
+		
+	</manager>
+</b:beans>

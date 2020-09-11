@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:a="urn:schemas:morphis:frames:addition" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="RESSARCIMENTO_SUS_ANEXO"/>
+	<panel name="TAP_ANEXOS" style="ui-content-full">
+		<panel bottom="10px" left="10px" right="10px" style="ui-box-vertical" top="5px">
+			<flowlayout orientation="vertical">
+				<panel a:gapvertical="10px" a:paddingleft="50px" a:paddingright="10px" a:paddingtop="10px" style="ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="String" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dsFile.label" labelalign="center" labelposition="left" member="DS_FILE" name="dsFile" tooltip="mRessarcimentoSus.ressarcimentoSus.dsFile.tooltip" width="80%"/>
+						<filebox action="btn_upload_arquivo_retorno_click" block="RESSARCIMENTO_SUS" icon="mv-basico-pasta_aberta" member="BTN_UPLOAD_ARQUIVO_RETORNO" name="btnUploadArquivoRetorno" tooltip="mRessarcimentoSus.ressarcimentoSus.btnUploadArquivoRetorno.tooltip" width="44px"/>
+						<button action="btn_importar_arquivo_retorno_click" block="RESSARCIMENTO_SUS" label="mRessarcimentoSus.ressarcimentoSus.btnImportarArquivoRetorno.label" member="BTN_IMPORTAR_ARQUIVO_RETORNO" name="btnImportarArquivoRetorno" width="100px"/>
+					</flowlayout>
+				</panel>
+				<panel height="100%" style="ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<gridview block="RESSARCIMENTO_SUS_ANEXO" height="100%" name="grdRessarcimentoSusAnexo" width="100%">
+							<viewheader>
+								<viewcolumn datatype="Number" label="mRessarcimentoSus.ressarcimentoSusAnexo.cdRessarcimentoSusAnexo.label" maxlength="12" member="CD_RESSARCIMENTO_SUS_ANEXO" name="grdRessarcimentoSusAnexo_cdRessarcimentoSusAnexo" readonly="true" textalign="right" width="80px"/>
+								<viewcolumn datatype="String" label="mRessarcimentoSus.ressarcimentoSusAnexo.dsArquivo.label" maxlength="300" member="DS_ARQUIVO" name="grdRessarcimentoSusAnexo_dsArquivo" readonly="true" width="300px"/>
+								<viewcolumn datatype="String" label="mRessarcimentoSus.ressarcimentoSusAnexo.cdUsuarioInclusao.label" maxlength="100" member="CD_USUARIO_INCLUSAO" name="grdRessarcimentoSusAnexo_cdUsuarioInclusao" readonly="true" visible="false" width="200px"/>
+								<viewcolumn datatype="Date" label="mRessarcimentoSus.ressarcimentoSusAnexo.dtInclusao.label" member="DT_INCLUSAO" name="grdRessarcimentoSusAnexo_dtInclusao" readonly="true" width="100px"/>
+								<viewcolumn datatype="String" label="mRessarcimentoSus.ressarcimentoSusAnexo.dspNmUsuario.label" member="DSP_NM_USUARIO" name="grdRessarcimentoSusAnexo_dspNmUsuario" readonly="true" width="100px"/>
+							</viewheader>
+						</gridview>
+					</flowlayout>
+				</panel>
+			</flowlayout>
+		</panel>
+	</panel>
+</config>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel name="TAP_OBSERVACOES" style="ui-content-full">
+		<panel bottom="10px" left="10px" right="10px" style="ui-box-vertical" top="10px">
+			<flowlayout orientation="vertical">
+				<panel height="100%" style="ui-panel-align-center ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<gridview block="HISTORICO_RESSARCIMENTO_SUS" height="100%" name="grdHistoricoRessarcimentoSus" width="100%">
+							<viewheader>
+								<viewcolumn datatype="Date" label="mRessarcimentoSus.historicoRessarcimentoSus.dspData.label" member="DSP_DATA" name="grdHistoricoRessarcimentoSus_dspData" readonly="true" style="MVDataCompleta" width="50px">
+									<editor>
+										<calendar/>
+									</editor>
+								</viewcolumn>
+								<viewcolumn datatype="Date" label="mRessarcimentoSus.historicoRessarcimentoSus.dhUltimaAlteracao.label" member="DH_ULTIMA_ALTERACAO" name="grdHistoricoRessarcimentoSus_dhUltimaAlteracao" readonly="true" style="MVMask120" width="50px">
+									<editor>
+										<calendar/>
+									</editor>
+								</viewcolumn>
+								<viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.historicoRessarcimentoSus.cdUsuario.label" member="CD_USUARIO" name="grdHistoricoRessarcimentoSus_cdUsuario" readonly="true" width="50px"/>
+								<viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.historicoRessarcimentoSus.dsObservacao.label" member="DS_OBSERVACAO" name="grdHistoricoRessarcimentoSus_dsObservacao" width="200px">
+									<xl:event action="ds_observacao_doubleClick" name="doubleclick"/>
+								</viewcolumn>
+							</viewheader>
+						</gridview>
+					</flowlayout>
+				</panel>
+				<panel style="ui-panel-align-left ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<button action="btn_observacao_click" block="CONTROLE" label="mRessarcimentoSus.controle.btnObservacao.label" member="BTN_OBSERVACAO" name="btnObservacao" width="150px"/>
+					</flowlayout>
+				</panel>
+			</flowlayout>
+		</panel>
+	</panel>
+</config>

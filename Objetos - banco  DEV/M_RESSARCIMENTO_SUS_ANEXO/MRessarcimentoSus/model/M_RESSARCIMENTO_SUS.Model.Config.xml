@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+	<b:import resource="classpath:/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/model/RESSARCIMENTO_SUS.Manager.Config.xml"/>
+	<b:import resource="classpath:/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/model/HISTORICO_RESSARCIMENTO_SUS.Manager.Config.xml"/>
+	<b:import resource="classpath:/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/model/RESSARCIMENTO_SUS_ANEXO.Manager.Config.xml"/>
+	<b:import resource="classpath:/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/model/ITEM_RESSARCIMENTO_SUS_ANEXO.Manager.Config.xml"/>
+	<b:import resource="classpath:/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/model/VALIDA_ITEM_RESS_SUS_ANEXO.Manager.Config.xml"/>
+	<b:import resource="classpath:/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/model/M_RESSARCIMENTO_SUS.ValueSet.Config.xml"/>
+	
+	<formModel id="M_RESSARCIMENTO_SUS.Model.Config" name="M_RESSARCIMENTO_SUS">
+		<modelClass>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.model.MRessarcimentoSusModel</modelClass>
+		<parameters>
+			<parameter name="VERSAO_RELEASE" type="String">
+				<value>
+					<constant>A</constant>
+				</value>
+			</parameter>
+			<parameter name="VERSAO" type="String">
+				<value>
+					<constant>1.05</constant>
+				</value>
+			</parameter>
+		</parameters>
+		<businessObjects>
+			<businessObject name="RESSARCIMENTO_SUS" manager="RESSARCIMENTO_SUS.Manager.Config">
+				<associations>
+					<association child="HISTORICO_RESSARCIMENTO_SUS" preventParentlessOperations="true">
+						<mapping parent="CD_RESSARCIMENTO_SUS" child="CD_RESSARCIMENTO_SUS"/>
+					</association>
+					<association child="RESSARCIMENTO_SUS_ANEXO" preventParentlessOperations="true">
+						<mapping parent="CD_RESSARCIMENTO_SUS" child="CD_RESSARCIMENTO_SUS"/>
+					</association>
+					<association child="ITEM_RESSARCIMENTO_SUS_ANEXO" autoQuery="false">
+						<mapping parent="CD_RESSARCIMENTO_SUS" child="CD_RESSARCIMENTO_SUS"/>
+					</association>
+				</associations>
+			</businessObject>
+			<businessObject name="HISTORICO_RESSARCIMENTO_SUS" manager="HISTORICO_RESSARCIMENTO_SUS.Manager.Config">
+			</businessObject>
+			<businessObject name="RESSARCIMENTO_SUS_ANEXO" manager="RESSARCIMENTO_SUS_ANEXO.Manager.Config">
+			</businessObject>
+			<businessObject name="ITEM_RESSARCIMENTO_SUS_ANEXO" manager="ITEM_RESSARCIMENTO_SUS_ANEXO.Manager.Config">
+			</businessObject>
+			<businessObject name="VALIDA_ITEM_RESS_SUS_ANEXO" manager="VALIDA_ITEM_RESS_SUS_ANEXO.Manager.Config">
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+			<valueSet config="RG_TIP_DOC.ValueSet.Config"/>
+			<valueSet config="RG_FORNECEDOR.ValueSet.Config"/>
+		</valueSets>
+	</formModel>
+</b:beans>

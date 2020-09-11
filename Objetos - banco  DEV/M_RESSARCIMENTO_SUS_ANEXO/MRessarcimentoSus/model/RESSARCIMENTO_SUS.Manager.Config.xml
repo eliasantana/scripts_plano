@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="RESSARCIMENTO_SUS.Manager.Config" name="DBAPS.RESSARCIMENTO_SUS">
+		<items>
+			<item name="CD_RESSARCIMENTO_SUS" logicalName="cdRessarcimentoSus" type="java.math.BigDecimal" physicalName="CD_RESSARCIMENTO_SUS" key="true">
+			</item>
+			<item name="DS_OFICIO" logicalName="dsOficio" type="java.lang.String" physicalName="DS_OFICIO">
+			</item>
+			<item name="DT_OFICIO" logicalName="dtOficio" type="java.util.Date" physicalName="DT_OFICIO">
+			</item>
+			<item name="VL_OFICIO" logicalName="vlOficio" type="java.math.BigDecimal" physicalName="VL_OFICIO">
+			</item>
+			<item name="DT_COMPET_INICIAL" logicalName="dtCompetInicial" type="java.util.Date" physicalName="DT_COMPET_INICIAL">
+			</item>
+			<item name="DT_COMPET_FINAL" logicalName="dtCompetFinal" type="java.util.Date" physicalName="DT_COMPET_FINAL">
+			</item>
+			<item name="NR_PROCESSO_OFICIO" logicalName="nrProcessoOficio" type="java.lang.String" physicalName="NR_PROCESSO_OFICIO">
+			</item>
+			<item name="NR_GRU" logicalName="nrGru" type="java.math.BigDecimal" physicalName="NR_GRU">
+			</item>
+			<item name="DT_GRU" logicalName="dtGru" type="java.util.Date" physicalName="DT_GRU">
+			</item>
+			<item name="DT_EMISSAO" logicalName="dtEmissao" type="java.util.Date" physicalName="DT_EMISSAO">
+			</item>
+			<item name="DT_VENCIMENTO" logicalName="dtVencimento" type="java.util.Date" physicalName="DT_VENCIMENTO">
+			</item>
+			<item name="VL_GRU" logicalName="vlGru" type="java.math.BigDecimal" physicalName="VL_GRU">
+			</item>
+			<item name="CD_TIP_DOC" logicalName="cdTipDoc" type="java.math.BigDecimal" physicalName="CD_TIP_DOC">
+			</item>
+			<item name="NR_DOC_GRU" logicalName="nrDocGru" type="java.math.BigDecimal" physicalName="NR_DOC_GRU">
+			</item>
+			<item name="CD_FORNECEDOR" logicalName="cdFornecedor" type="java.math.BigDecimal" physicalName="CD_FORNECEDOR">
+			</item>
+			<item name="CD_USUARIO_INCLUSAO" logicalName="cdUsuarioInclusao" type="java.lang.String" physicalName="CD_USUARIO_INCLUSAO">
+			</item>
+			<item name="DH_INCLUSAO" logicalName="dhInclusao" type="java.util.Date" physicalName="DH_INCLUSAO">
+			</item>
+			<item name="CD_USUARIO_ALTERACAO" logicalName="cdUsuarioAlteracao" type="java.lang.String" physicalName="CD_USUARIO_ALTERACAO">
+			</item>
+			<item name="DH_ULTIMA_ALTERACAO" logicalName="dhUltimaAlteracao" type="java.util.Date" physicalName="DH_ULTIMA_ALTERACAO">
+			</item>
+			<item name="DS_OFICIO_GRU" logicalName="dsOficioGru" type="java.lang.String" physicalName="DS_OFICIO_GRU">
+			</item>
+			<item name="DSP_TIP_DOC" logicalName="dspTipDoc" type="java.lang.String" virtual="true">
+			</item>
+			<item name="DSP_NM_FORNECEDOR" logicalName="dspFornecedor" type="java.lang.String" virtual="true">
+			</item>
+			<item name="CD_CON_PAG" logicalName="cdConPag" type="java.math.BigDecimal" physicalName="CD_CON_PAG">
+			</item>
+			<item name="CD_MULTI_EMPRESA" logicalName="cdMultiEmpresa" type="java.math.BigDecimal" physicalName="CD_MULTI_EMPRESA">
+			</item>
+			<item name="DSP_CD_CON_PAG_DEFINITIVA" logicalName="dspCdConPagDefinitiva" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="CD_FATURA_ABI" logicalName="cdFaturaAbi" type="java.math.BigDecimal" physicalName="CD_FATURA_ABI">
+			</item>
+			<item name="CD_FATURA_GRU" logicalName="cdFaturaGru" type="java.math.BigDecimal" physicalName="CD_FATURA_GRU">
+			</item>
+			<item name="DS_FILE" logicalName="dsFile" type="java.lang.String" virtual="true">
+			</item>
+			<item name="DSP_SUM_VL_ATENDIMENTOS" logicalName="dspSumVlAtendimentos" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_NR_REEMBOLSOS" logicalName="dspNrReembolsos" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_COBRADO" logicalName="dspVlReembolsoCobrado" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_PAGAR" logicalName="dspVlReembolsoPagar" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_GLOSADO" logicalName="dspVlReembolsoGlosado" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_NR_REEMBOLSOS_E" logicalName="dspNrReembolsosE" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_COBRADO_E" logicalName="dspVlReembolsoCobradoE" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_PAGAR_E" logicalName="dspVlReembolsoPagarE" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_GLOSADO_E" logicalName="dspVlReembolsoGlosadoE" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_NR_REEMBOLSOS_C" logicalName="dspNrReembolsosC" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_COBRADO_C" logicalName="dspVlReembolsoCobradoC" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_PAGAR_C" logicalName="dspVlReembolsoPagarC" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_GLOSADO_C" logicalName="dspVlReembolsoGlosadoC" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_NR_REEMBOLSOS_N" logicalName="dspNrReembolsosN" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_COBRADO_N" logicalName="dspVlReembolsoCobradoN" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_PAGAR_N" logicalName="dspVlReembolsoPagarN" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="DSP_VL_REEMBOLSO_GLOSADO_N" logicalName="dspVlReembolsoGlosadoN" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="BTN_UPLOAD_ARQUIVO_RETORNO" logicalName="btnUploadArquivoRetorno" type="java.lang.String" virtual="true">
+			</item>
+			<item name="DSP_DS_FILE" logicalName="dspDsFile" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.model.RessarcimentoSusAdapter</adapterClass>
+		
+		<defaultWhereClause><![CDATA[cd_multi_empresa = DBAMV.PKG_MV2000.LE_EMPRESA]]></defaultWhereClause>
+		<defaultOrderByClause><![CDATA[CD_RESSARCIMENTO_SUS DESC]]></defaultOrderByClause>
+		
+		
+		
+	</manager>
+</b:beans>

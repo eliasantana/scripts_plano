@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:a="urn:schemas:morphis:frames:addition" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional">
+    <interactionblock name="VALIDA_ITEM_RESS_SUS_ANEXO"/>
+    <interactionblock name="RESSARCIMENTO_SUS"/>
+    <panel name="TAP_VALIDACAO" style="ui-content-full">
+        <panel bottom="10px" left="10px" right="10px" style="ui-box-vertical" top="5px">
+            <flowlayout orientation="vertical">
+                <gridview block="VALIDA_ITEM_RESS_SUS_ANEXO" height="100%" name="grdValidaItemRessSusAnexo" width="100%">
+                    <viewheader>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.validaItemRessSusAnexo.cdValidaItemRessSusAnexo.label" member="CD_VALIDA_ITEM_RESS_SUS_ANEXO" name="grdValidaItemRessSusAnexo_cdValidaItemRessSusAnexo" textalign="right" width="70px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.validaItemRessSusAnexo.cdItemRessarcimentSusAnexo.label" member="CD_ITEM_RESSARCIMENT_SUS_ANEXO" name="grdValidaItemRessSusAnexo_cdItemRessarcimentSusAnexo" textalign="right" width="70px"/>
+                        <viewcolumn datatype="Date" label="mRessarcimentoSus.validaItemRessSusAnexo.dtValidacao.label" member="DT_VALIDACAO" name="grdValidaItemRessSusAnexo_dtValidacao" style="MVDataHora" width="80px"/>
+                        <viewcolumn datatype="String" label="mRessarcimentoSus.validaItemRessSusAnexo.dsValidacao.label" member="DS_VALIDACAO" name="dsValidacao" width="100px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.validaItemRessSusAnexo.tpValidacao.label" member="TP_VALIDACAO" name="grdValidaItemRessSusAnexo_tpValidacao" visible="false" width="70px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.validaItemRessSusAnexo.dsMensagem.label" maxlength="4000" member="DS_MENSAGEM" name="grdValidaItemRessSusAnexo_dsMensagem" width="500px"/>
+                    </viewheader>
+                </gridview>
+                <panel a:paddingtop="10px" style="ui-box-horizontal" width="100%">
+                    <flowlayout orientation="horizontal">
+                        <panel style="ui-panel-align-left ui-box-horizontal" width="100%">
+                            <flowlayout orientation="horizontal">
+                                <button action="btn_localizar_item_ress_sus_anexo_click" block="VALIDA_ITEM_RESS_SUS_ANEXO" label="mRessarcimentoSus.validaItemRessSusAnexo.btnLocalizarItemRessSusAnexo.label" member="BTN_LOCALIZAR_ITEM_RESS_SUS_ANEXO" name="btnLocalizarItemRessSusAnexo" width="200px"/>
+                            </flowlayout>
+                        </panel>
+                        <panel style="ui-panel-align-right ui-box-horizontal" width="100%">
+                            <flowlayout orientation="horizontal">
+                                <button action="btn_exportar_impugnacoes_click" block="RESSARCIMENTO_SUS" label="mRessarcimentoSus.ressarcimentoSus.btnExportarImpugnacoes.label" member="BTN_EXPORTAR_IMPUGNACOES" name="btnExportarImpugnacoes" width="200px"/>
+                            </flowlayout>
+                        </panel>
+                    </flowlayout>
+                </panel>
+            </flowlayout>
+        </panel>
+    </panel>
+</config>

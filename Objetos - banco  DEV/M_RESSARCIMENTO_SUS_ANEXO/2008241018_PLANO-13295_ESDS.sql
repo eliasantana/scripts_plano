@@ -1,0 +1,18 @@
+--<DS_SCRIPT>
+-- DESCRIÇÃO..: Criação da tabela DBAPS.TMP_CD_RESSARCIMENTO_SUS_ANEXO para auxiliar no processarmento de Ressarcimento de Itens do Sus Anexo
+-- RESPONSAVEL: Elias Santana
+-- DATA.......: 24/08/2020
+-- APLICAÇÃO..: MVS
+--</DS_SCRIPT>
+--<USUARIO=DBAPS>
+
+CREATE TABLE DBAPS.TMP_CD_RESSARCIMENTO_SUS_ANEXO (
+  cd_item_ress_sus_anexo NUMBER       NULL,
+  cd_usuario             VARCHAR2(30) NULL
+)
+
+/
+COMMENT ON COLUMN DBAPS.TMP_CD_RESSARCIMENTO_SUS_ANEXO.cd_item_ress_sus_anexo IS 'CÓDIGO DO ITEM DE RESSARCIMENTO A SER ATUALIZADO'
+COMMENT ON COLUMN DBAPS.TMP_CD_RESSARCIMENTO_SUS_ANEXO.cd_usuario IS 'USUÁRIO LOGADO'
+
+

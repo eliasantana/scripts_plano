@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="RG_TIP_DOC.ValueSet.Config" name="RG_TIP_DOC">
+		<columns>
+			<column name="CD_TIP_DOC" type="Number" size="2"/>
+			<column name="DS_TIP_DOC" type="String" size="30"/>
+		</columns>
+		<query><![CDATA[select cd_tip_doc, ds_tip_doc from dbamv.TIP_DOC where sn_ativo = 'S']]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="RG_FORNECEDOR.ValueSet.Config" name="RG_FORNECEDOR">
+		<columns>
+			<column name="CD_FORNECEDOR" type="Number" size="6"/>
+			<column name="NM_FORNECEDOR" type="String" size="40"/>
+		</columns>
+		<query><![CDATA[select cd_fornecedor, nm_fornecedor from dbamv.FORNECEDOR where sn_ativo = 'S']]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="VALIDA_ITEM_RESS_SUS_ANEXO.Manager.Config" name="VALIDA_ITEM_RESS_SUS_ANEXO" queryOnly="true">
+		<kind>Query</kind>
+		<items>
+			<item name="CD_VALIDA_ITEM_RESS_SUS_ANEXO" logicalName="cdValidaItemRessSusAnexo" type="java.math.BigDecimal" physicalName="CD_VALIDA_ITEM_RESS_SUS_ANEXO" key="true">
+			</item>
+			<item name="CD_ITEM_RESSARCIMENT_SUS_ANEXO" logicalName="cdItemRessarcimentSusAnexo" type="java.math.BigDecimal" physicalName="CD_ITEM_RESSARCIMENT_SUS_ANEXO">
+			</item>
+			<item name="TP_VALIDACAO" logicalName="tpValidacao" type="java.lang.String" physicalName="TP_VALIDACAO">
+			</item>
+			<item name="DS_MENSAGEM" logicalName="dsMensagem" type="java.lang.String" physicalName="DS_MENSAGEM">
+			</item>
+			<item name="DT_VALIDACAO" logicalName="dtValidacao" type="java.util.Date" physicalName="DT_VALIDACAO">
+			</item>
+			<item name="DS_VALIDACAO" logicalName="dsValidacao" type="String" physicalName="DS_VALIDACAO">
+			</item>
+		</items>
+		<source><![CDATA[SELECT CD_VALIDA_ITEM_RESS_SUS_ANEXO,
+						       CD_ITEM_RESSARCIMENT_SUS_ANEXO,
+						       TP_VALIDACAO,
+						       DS_MENSAGEM,
+						       DT_VALIDACAO,
+						       CASE WHEN TP_VALIDACAO = 'A' THEN
+						        'AUTORIZADO'
+						       WHEN TP_VALIDACAO = 'I' THEN
+						        'IMPUGNADO'
+						       WHEN TP_VALIDACAO = 'E' THEN
+						        'ERRO'
+						       END DS_VALIDACAO 
+						  FROM DBAPS.VALIDA_ITEM_RESS_SUS_ANEXO
+						 WHERE CD_ITEM_RESSARCIMENT_SUS_ANEXO IN (SELECT I.CD_ITEM_RESSARCIMENT_SUS_ANEXO 
+						                                            FROM DBAPS.RESSARCIMENTO_SUS R, 
+						                                                 DBAPS.ITEM_RESSARCIMENTO_SUS_ANEXO I 
+						                                           WHERE R.CD_RESSARCIMENTO_SUS = I.CD_RESSARCIMENTO_SUS 
+						                                             AND R.CD_RESSARCIMENTO_SUS = :P_CD_RESSARCIMENTO_SUS)]]></source>
+		
+		<adapterClass>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.model.ValidaItemRessSusAnexoAdapter</adapterClass>
+		
+		<queryAllRecords>true</queryAllRecords>
+
+		
+		
+		
+	</manager>
+</b:beans>

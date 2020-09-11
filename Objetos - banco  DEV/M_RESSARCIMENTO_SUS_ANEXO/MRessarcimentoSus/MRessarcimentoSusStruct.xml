@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/MRessarcimentoSusAlerts.xml" LovDataPath="/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/MRessarcimentoSusLovs.xml" Name="M_RESSARCIMENTO_SUS">
+    <Visual>
+        <Window Id="WIN_PRINCIPAL" Title="mRessarcimentoSus.winPrincipal.title" Url="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/ViewWinPrincipal">
+            <ContentCanvas Id="CNV_PRINCIPAL"/>
+            <TabPageCanvas Id="TAB_PRINCIPAL">
+                <Page Id="TAP_ANEXOS" Label="mRessarcimentoSus.tapAnexos.label"/>
+                <Page Id="TAP_ATENDIMENTOS" Label="mRessarcimentoSus.tapAtendimentos.label"/>
+                <Page Id="TAP_VALIDACAO" Label="mRessarcimentoSus.tapValidacao.label"/>
+                <Page Id="TAP_GRU" Label="mRessarcimentoSus.tapGru.label"/>
+                <Page Id="TAP_OBSERVACOES" Label="mRessarcimentoSus.tapObservacoes.label"/>
+            </TabPageCanvas>
+        </Window>
+        <Window Id="WIN_MODAL" Modal="true" Title="mRessarcimentoSus.winModal.title" Url="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/ViewWinModal">
+            <ContentCanvas Id="CNV_MODAL"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="RESSARCIMENTO_SUS">
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="CNV_PRINCIPAL" Id="CD_RESSARCIMENTO_SUS" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="DS_OFICIO" Required="true" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="DT_OFICIO" Required="true" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="VL_OFICIO" Required="true" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="NR_PROCESSO_OFICIO" Required="true" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="DT_COMPET_INICIAL" Required="true" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="DT_COMPET_FINAL" Required="true" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DS_OFICIO_GRU" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DT_GRU" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="NR_GRU" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="NR_DOC_GRU" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DT_EMISSAO" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DT_VENCIMENTO" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="VL_GRU" PageName="TAP_GRU" Type="TextItem" Visible="false"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_TIP_DOC" Lov="LOV_TIP_DOC" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Enabled="false" Id="DSP_TIP_DOC" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_FORNECEDOR" Lov="LOV_FORNECEDOR" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Enabled="false" Id="DSP_NM_FORNECEDOR" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSus.cdConPag.hint" Id="CD_CON_PAG" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSus.dspCdConPagDefinitiva.hint" Id="DSP_CD_CON_PAG_DEFINITIVA" PageName="TAP_GRU" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="CD_USUARIO_INCLUSAO" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Enabled="false" Id="DH_INCLUSAO" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="CD_USUARIO_ALTERACAO" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Enabled="false" Id="DH_ULTIMA_ALTERACAO" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="CD_MULTI_EMPRESA" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Enabled="false" Id="CD_FATURA_ABI" Type="TextItem" Visible="false"/>
+            <Item CanvasName="CNV_PRINCIPAL" Enabled="false" Id="CD_FATURA_GRU" Type="TextItem" Visible="false"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSus.btnUploadArquivoRetorno.hint" Id="BTN_UPLOAD_ARQUIVO_RETORNO" PageName="TAP_ATENDIMENTOS" Type="FileBox"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSus.btnImportarArquivoRetorno.hint" Id="BTN_IMPORTAR_ARQUIVO_RETORNO" PageName="TAP_ATENDIMENTOS" Type="Button"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSus.dsFile.hint" Id="DS_FILE" PageName="TAP_ATENDIMENTOS" Type="DisplayItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_SUM_VL_ATENDIMENTOS" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSus.btnExportarImpugnacoes.hint" Id="BTN_EXPORTAR_IMPUGNACOES" PageName="TAP_VALIDACAO" Type="Button"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_NR_REEMBOLSOS" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_COBRADO" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_PAGAR" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_GLOSADO" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_NR_REEMBOLSOS_E" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_COBRADO_E" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_PAGAR_E" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_GLOSADO_E" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_NR_REEMBOLSOS_C" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_COBRADO_C" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_PAGAR_C" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_GLOSADO_C" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_NR_REEMBOLSOS_N" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_COBRADO_N" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_PAGAR_N" PageName="TAP_GRU" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DSP_VL_REEMBOLSO_GLOSADO_N" PageName="TAP_GRU" Type="TextItem"/>
+        </Block>
+        <Block AllowDelete="false" AllowInsert="false" AllowLoad="false" AllowSearch="false" AllowUpdate="false" Id="CONTROLE">
+            <Item CanvasName="CNV_PRINCIPAL" Id="BTN_ATENDIMENTOS" Type="Button"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="BTN_CON_PAG" Type="Button"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="BTN_OBSERVACAO" Type="Button"/>
+            <Item CanvasName="CNV_MODAL" Id="BTN_SAIR" Type="Button"/>
+            <Item CanvasName="CNV_MODAL" Id="BTN_SALVAR" Type="Button"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="BTN_CRIAR_CON_PAG" PageName="TAP_GRU" Type="Button"/>
+            <Item CanvasName="CNV_PRINCIPAL" Hint="mRessarcimentoSus.controle.btnValidar.hint" Id="BTN_VALIDAR" Type="Button"/>
+            <Item CanvasName="CNV_PRINCIPAL" Hint="mRessarcimentoSus.controle.btnCriarReembolso.hint" Id="BTN_CRIAR_REEMBOLSO" Type="Button"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="BTN_ABRIR_REEMBOLSO" PageName="TAP_ATENDIMENTOS" Type="Button"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="BTN_MARCAR_TODOS" PageName="TAP_ATENDIMENTOS" Type="Button"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="BTN_DESMARCAR_TODOS" PageName="TAP_ATENDIMENTOS" Type="Button"/>
+        </Block>
+        <Block Id="HISTORICO_RESSARCIMENTO_SUS" MultiRecord="true">
+            <Item CanvasName="CNV_PRINCIPAL" Id="CD_HISTORICO_RESSARCIMENTO_SUS" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="CD_RESSARCIMENTO_SUS" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="DS_OBSERVACAO" Type="TextItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="CD_USUARIO" Type="DisplayItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="DH_ULTIMA_ALTERACAO" Type="DisplayItem"/>
+            <Item CanvasName="CNV_PRINCIPAL" Id="DSP_DATA" Type="DisplayItem"/>
+            <Item CanvasName="CNV_MODAL" Id="DSP_POP_OBSERVACAO" Type="TextArea"/>
+        </Block>
+        <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="RESSARCIMENTO_SUS_ANEXO" MultiRecord="true" NavigationStyle="ChangeRecord">
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSusAnexo.cdRessarcimentoSusAnexo.hint" Id="CD_RESSARCIMENTO_SUS_ANEXO" PageName="TAP_ANEXOS" Type="TextItem"/>
+            <Item Hint="mRessarcimentoSus.ressarcimentoSusAnexo.cdRessarcimentoSus.hint" Id="CD_RESSARCIMENTO_SUS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSusAnexo.dsArquivo.hint" Id="DS_ARQUIVO" PageName="TAP_ANEXOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSusAnexo.cdUsuarioInclusao.hint" Id="CD_USUARIO_INCLUSAO" PageName="TAP_ANEXOS" Type="TextItem" Visible="false"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSusAnexo.dtInclusao.hint" Id="DT_INCLUSAO" PageName="TAP_ANEXOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.ressarcimentoSusAnexo.dspNmUsuario.hint" Id="DSP_NM_USUARIO" PageName="TAP_ANEXOS" Type="TextItem"/>
+        </Block>
+        <Block Id="ITEM_RESSARCIMENTO_SUS_ANEXO" MultiRecord="true" NavigationStyle="ChangeRecord">
+            <Item CanvasName="TAB_PRINCIPAL" Id="DSP_DS_COR_CRITICA" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="CD_ITEM_RESSARCIMENT_SUS_ANEXO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="CD_REEMBOLSO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="CD_RESSARCIMENTO_SUS_ANEXO" PageName="TAP_ATENDIMENTOS" Type="TextItem" Visible="false"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DSP_NM_ANEXO" PageName="TAP_ATENDIMENTOS" Type="TextItem" Visible="false"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="NR_ATENDIMENTO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_CCO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_MATRICULA" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_MAT_ALTERNATIVA" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="NM_SEGURADO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_PROCEDIMENTO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DS_PROCEDIMENTO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="VL_PROCEDIMENTO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="NM_UPS" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="NM_MUNICIPIO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_UF" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="NR_COMPETENCIA" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="TP_ATENDIMENTO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DT_INICIO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DT_FIM" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_CARATER" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="CD_BENEFICIARIO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DT_NASC_BENEFICIARIO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="VL_TOTAL" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DS_ATENDIMENTO" PageName="TAP_ATENDIMENTOS" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DSP_CD_VALIDA_ITEM_RESS_SUS_ANEXO" PageName="TAP_ATENDIMENTOS" Type="TextItem" Visible="false"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="CD_RESSARCIMENTO_SUS" PageName="TAP_ATENDIMENTOS" Type="TextItem" Visible="false"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.itemRessarcimentoSusAnexo.btnLocalizarValidaItemRessSus.hint" Id="BTN_LOCALIZAR_VALIDA_ITEM_RESS_SUS" PageName="TAP_ATENDIMENTOS" Type="Button"/>
+            <Item Id="TP_VALIDACAO" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="SN_CONFIRMAR" PageName="TAP_ATENDIMENTOS" Type="Checkbox"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="TP_PROCEDIMENTO" PageName="TAP_ATENDIMENTOS" Type="List"/>
+        </Block>
+        <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="VALIDA_ITEM_RESS_SUS_ANEXO" MultiRecord="true" NavigationStyle="ChangeRecord">
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="CD_VALIDA_ITEM_RESS_SUS_ANEXO" PageName="TAP_VALIDACAO" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="CD_ITEM_RESSARCIMENT_SUS_ANEXO" PageName="TAP_VALIDACAO" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="TP_VALIDACAO" PageName="TAP_VALIDACAO" Type="TextItem" Visible="false"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DS_MENSAGEM" PageName="TAP_VALIDACAO" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="TAB_PRINCIPAL" Id="DT_VALIDACAO" PageName="TAP_VALIDACAO" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Id="DS_VALIDACAO" PageName="TAP_VALIDACAO" Type="TextItem"/>
+            <Item CanvasName="TAB_PRINCIPAL" Hint="mRessarcimentoSus.validaItemRessSusAnexo.btnLocalizarItemRessSusAnexo.hint" Id="BTN_LOCALIZAR_ITEM_RESS_SUS_ANEXO" PageName="TAP_VALIDACAO" Type="Button"/>
+        </Block>
+    </Logic>
+</FormStructure>

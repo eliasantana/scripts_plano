@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="HISTORICO_RESSARCIMENTO_SUS"/>
+	<interactionblock name="CONTROLE"/>
+	<panel class="ContentCanvas" name="CNV_MODAL" style="ui-content-full">
+		<framepanel bottom="10px" left="10px" right="10px" top="10px">
+			<textarea block="HISTORICO_RESSARCIMENTO_SUS" bottom="60px" case="upper" datatype="String" left="15px" maxlength="2000" member="DSP_POP_OBSERVACAO" multiline="true" name="dspPopObservacao" right="15px" top="10px"/>
+			<button action="btn_sair_click" block="CONTROLE" bottom="20px" height="22px" label="mRessarcimentoSus.controle.btnSair.label" member="BTN_SAIR" name="btnSair" right="80px" width="100px"/>
+			<button action="btn_salvar_click" block="CONTROLE" bottom="20px" label="mRessarcimentoSus.controle.btnSalvar.label" left="80px" member="BTN_SALVAR" name="btnSalvar" width="100px"/>
+		</framepanel>
+	</panel>
+</config>

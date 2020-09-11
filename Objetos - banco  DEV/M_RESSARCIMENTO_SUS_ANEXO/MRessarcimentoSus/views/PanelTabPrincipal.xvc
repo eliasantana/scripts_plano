@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<tabpanel action="TabMRessarcimentoSus_tabChange" name="TAB_PRINCIPAL" style="ui-content-full">
+		<tab label="mRessarcimentoSus.tapAnexos.label" name="TAP_ANEXOS">
+			<include src="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/TabTabPrincipalTapAnexos"/>
+		</tab>
+		<tab label="mRessarcimentoSus.tapAtendimentos.label" name="TAP_ATENDIMENTOS">
+			<include src="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/TabTabPrincipalTapAtendimentos"/>
+		</tab>
+		<tab label="mRessarcimentoSus.tapValidacao.label" name="TAP_VALIDACAO">
+			<include src="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/TabTabPrincipalTapValidacao"/>
+		</tab>
+		<tab label="mRessarcimentoSus.tapGru.label" name="TAP_GRU">
+			<include src="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/TabTabPrincipalTapGru"/>
+		</tab>
+		<tab label="mRessarcimentoSus.tapObservacoes.label" name="TAP_OBSERVACOES">
+			<include src="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/TabTabPrincipalTapObservacoes"/>
+		</tab>
+	</tabpanel>
+</config>

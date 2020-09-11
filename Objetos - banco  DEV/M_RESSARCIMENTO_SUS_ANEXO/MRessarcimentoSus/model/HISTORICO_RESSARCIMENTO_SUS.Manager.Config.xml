@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="HISTORICO_RESSARCIMENTO_SUS.Manager.Config" name="DBAPS.HISTORICO_RESSARCIMENTO_SUS">
+		<items>
+			<item name="CD_HISTORICO_RESSARCIMENTO_SUS" logicalName="cdHistoricoRessarcimentoSus" type="java.math.BigDecimal" key="true">
+			</item>
+			<item name="CD_RESSARCIMENTO_SUS" logicalName="cdRessarcimentoSus" type="java.math.BigDecimal">
+			</item>
+			<item name="DS_OBSERVACAO" logicalName="dsObservacao" type="String">
+			</item>
+			<item name="CD_USUARIO" logicalName="cdUsuario" type="String">
+			</item>
+			<item name="DH_ULTIMA_ALTERACAO" logicalName="dhUltimaAlteracao" type="java.util.Date">
+			</item>
+			<item name="DSP_DATA" logicalName="dspData" type="java.util.Date" virtual="true">
+			</item>
+			<item name="DSP_POP_OBSERVACAO" logicalName="dspPopObservacao" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.model.HistoricoRessarcimentoSusAdapter</adapterClass>
+		
+	</manager>
+</b:beans>

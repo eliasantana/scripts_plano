@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- model definition -->
+	<b:import resource="classpath:/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/model/M_RESSARCIMENTO_SUS.Model.Config.xml"/>
+	
+	<task id="M_RESSARCIMENTO_SUS.Task.Config" name="M_RESSARCIMENTO_SUS">
+		<taskClass>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.MRessarcimentoSusTask</taskClass>
+		
+		<!-- struct -->
+		<taskResources>/br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/MRessarcimentoSusStruct.xml</taskResources>
+		
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.services.MRessarcimentoSusServices</services>
+			<!-- Package Beans-->
+			<packages>
+			</packages>
+			<attachedLibraries>
+				<libraryConfiguration config="AUTENTICA.Lib.Config"/>
+				<libraryConfiguration config="OFGTEL.Lib.Config"/>
+				<libraryConfiguration config="OFGMES.Lib.Config"/>
+				<libraryConfiguration config="MV_ADM.Lib.Config"/>
+				<libraryConfiguration config="MV_REG_MAQ.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		
+		<!-- model -->
+		<formModelConfiguration config="M_RESSARCIMENTO_SUS.Model.Config"/>
+		
+		<!-- controllers -->
+		<formController>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.controller.MRessarcimentoSusFormController</formController>
+		<blockControllers>
+			<block name="CONTROLE">br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.controller.ControleController</block>
+			<block name="HISTORICO_RESSARCIMENTO_SUS">br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.controller.HistoricoRessarcimentoSusController</block>
+			<block name="ITEM_RESSARCIMENTO_SUS_ANEXO">br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.controller.ItemRessarcimentoSusAnexoController</block>
+			<block name="VALIDA_ITEM_RESS_SUS_ANEXO">br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.controller.ValidaItemRessSusAnexoController</block>
+			<block name="RESSARCIMENTO_SUS_ANEXO">br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.controller.RessarcimentoSusAnexoController</block>
+			<block name="RESSARCIMENTO_SUS">br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.controller.RessarcimentoSusController</block>
+		</blockControllers>
+	</task>
+</b:beans>

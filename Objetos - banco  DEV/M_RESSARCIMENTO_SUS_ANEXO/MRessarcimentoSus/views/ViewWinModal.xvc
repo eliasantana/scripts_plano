@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window height="250px" layout="positional" name="WIN_MODAL" title="mRessarcimentoSus.winModal.title" width="550px" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<include src="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/PanelCnvModal"/>
+</window>

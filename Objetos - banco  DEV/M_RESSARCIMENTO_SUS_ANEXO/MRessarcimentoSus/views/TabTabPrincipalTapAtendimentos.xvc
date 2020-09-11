@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:a="urn:schemas:morphis:frames:addition" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional">
+    <interactionblock name="RESSARCIMENTO_SUS"/>
+    <interactionblock name="ITEM_RESSARCIMENTO_SUS_ANEXO"/>
+    <panel name="TAP_ATENDIMENTOS" style="ui-content-full">
+        <interactionBlock name="CONTROLE"/>
+        <panel bottom="10px" left="10px" right="10px" style="ui-box-vertical" top="5px">
+            <flowlayout orientation="vertical">
+                <gridview a:scrollhorizontal="on" block="ITEM_RESSARCIMENTO_SUS_ANEXO" height="100%" name="grdItemRessarcimentoSusAnexo" width="100%">
+                    <viewheader>
+                        <viewcolumn datatype="String" label="" member="DSP_DS_COR_CRITICA" name="dspDsCorCritica" width="5px"/>
+                        <viewcolumn Validation="server" action="sn_confirmar_change" datatype="String" keyactions="ITEM_IN, ITEM_VALUE_CHANGE" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.snconFirmar.label" member="SN_CONFIRMAR" name="snConfirmar" width="70px">
+                            <editor>
+                                <checkbox falsevalue="N" value="S"/>
+                            </editor>
+                        </viewcolumn>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdItemRessarcimentSusAnexo.label" maxlength="12" member="CD_ITEM_RESSARCIMENT_SUS_ANEXO" name="grdItemRessarcimentoSusAnexo_cdItemRessarcimentSusAnexo" textalign="right" width="70px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdReembolso.label" maxlength="13" member="CD_REEMBOLSO" name="grdItemRessarcimentoSusAnexo_cdReembolso" textalign="right" width="100px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdRessarcimentoSusAnexo.label" maxlength="12" member="CD_RESSARCIMENTO_SUS_ANEXO" name="grdItemRessarcimentoSusAnexo_cdRessarcimentoSusAnexo" textalign="right" visible="false" width="80px"/>
+                        <viewcolumn datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.dspNmAnexo.label" member="DSP_NM_ANEXO" name="grdItemRessarcimentoSusAnexo_dspNmAnexo" visible="false" width="200px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.nrAtendimento.label" maxlength="20" member="NR_ATENDIMENTO" name="grdItemRessarcimentoSusAnexo_nrAtendimento" textalign="right" width="100px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdCco.label" maxlength="20" member="CD_CCO" name="grdItemRessarcimentoSusAnexo_cdCco" textalign="right" width="90px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdMatricula.label" member="CD_MATRICULA" name="cdMatricula" textalign="right" width="80px"/>
+                        <viewcolumn datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdMatAlternativa.label" member="CD_MAT_ALTERNATIVA" name="cdMatAlternativa" textalign="right" width="120px"/>
+                        <viewcolumn datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.nmSegurado.label" member="NM_SEGURADO" name="nmSegurado" width="140px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdProcedimento.label" maxlength="20" member="CD_PROCEDIMENTO" name="grdItemRessarcimentoSusAnexo_cdProcedimento" textalign="right" width="80px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.dsProcedimento.label" maxlength="500" member="DS_PROCEDIMENTO" name="grdItemRessarcimentoSusAnexo_dsProcedimento" width="300px"/>
+                        <viewcolumn datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.snTpProcedimento.label" member="TP_PROCEDIMENTO" name="tpProcedimento" width="110px">
+                            <editor>
+                                <combobox name="">
+                                    <model>
+                                        <item label="mRessarcimentoSus.itemRessarcimentoSusAnexo.snTpProcedimento.p.label" value="P"/>
+                                        <item label="mRessarcimentoSus.itemRessarcimentoSusAnexo.snTpProcedimento.e.label" value="E"/>                                        
+                                    </model>
+                                </combobox>
+                            </editor>
+                        </viewcolumn>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.vlProcedimento.label" maxlength="20" member="VL_PROCEDIMENTO" name="grdItemRessarcimentoSusAnexo_vlProcedimento" style="MVMask025" textalign="right" width="70px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.nmUps.label" maxlength="500" member="NM_UPS" name="grdItemRessarcimentoSusAnexo_nmUps" width="300px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.nmMunicipio.label" maxlength="500" member="NM_MUNICIPIO" name="grdItemRessarcimentoSusAnexo_nmMunicipio" width="100px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdUf.label" maxlength="2" member="CD_UF" name="grdItemRessarcimentoSusAnexo_cdUf" width="30px"/>
+                        <viewcolumn datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.nrCompetencia.label" maxlength="6" member="NR_COMPETENCIA" name="grdItemRessarcimentoSusAnexo_nrCompetencia" textalign="right" width="80px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.tpAtendimento.label" maxlength="50" member="TP_ATENDIMENTO" name="grdItemRessarcimentoSusAnexo_tpAtendimento" width="50px"/>
+                        <viewcolumn datatype="Date" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.dtInicio.label" member="DT_INICIO" name="grdItemRessarcimentoSusAnexo_dtInicio" width="70px">
+                            <editor>
+                                <calendar/>
+                            </editor>
+                        </viewcolumn>
+                        <viewcolumn datatype="Date" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.dtFim.label" member="DT_FIM" name="grdItemRessarcimentoSusAnexo_dtFim" width="70px">
+                            <editor>
+                                <calendar/>
+                            </editor>
+                        </viewcolumn>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdCarater.label" maxlength="6" member="CD_CARATER" name="grdItemRessarcimentoSusAnexo_cdCarater" textalign="right" width="50px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdBeneficiario.label" maxlength="20" member="CD_BENEFICIARIO" name="grdItemRessarcimentoSusAnexo_cdBeneficiario" textalign="right" width="140px"/>
+                        <viewcolumn datatype="Date" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.dtNascBeneficiario.label" member="DT_NASC_BENEFICIARIO" name="grdItemRessarcimentoSusAnexo_dtNascBeneficiario" width="70px">
+                            <editor>
+                                <calendar/>
+                            </editor>
+                        </viewcolumn>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.vlTotal.label" maxlength="20" member="VL_TOTAL" name="grdItemRessarcimentoSusAnexo_vlTotal" style="MVMask025" textalign="right" width="80px"/>
+                        <viewcolumn case="upper" datatype="String" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.dsAtendimento.label" maxlength="500" member="DS_ATENDIMENTO" name="grdItemRessarcimentoSusAnexo_dsAtendimento" width="500px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.dspCdValidaItemRessSusAnexo.label" member="DSP_CD_VALIDA_ITEM_RESS_SUS_ANEXO" name="grdItemRessarcimentoSusAnexo_dspCdValidaItemRessSusAnexo" textalign="right" visible="false" width="100px"/>
+                        <viewcolumn datatype="Number" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.cdRessarcimentoSus.label" maxlength="12" member="CD_RESSARCIMENTO_SUS" name="grdItemRessarcimentoSusAnexo_cdRessarcimentoSus" textalign="right" visible="false" width="84px"/>
+                    </viewheader>
+                </gridview>
+                <panel a:paddingtop="10px" style="ui-box-horizontal" width="100%">
+                    <flowlayout orientation="horizontal">
+                        <panel style="ui-panel-align-left ui-box-horizontal" width="100%">
+                            <flowlayout orientation="horizontal">
+                                <button action="btn_localizar_valida_item_ress_sus_click" block="ITEM_RESSARCIMENTO_SUS_ANEXO" label="mRessarcimentoSus.itemRessarcimentoSusAnexo.btnLocalizarValidaItemRessSus.label" member="BTN_LOCALIZAR_VALIDA_ITEM_RESS_SUS" name="btnLocalizarValidaItemRessSus" width="200px"/>
+                                <button action="btn_abrir_reembolso_click" block="CONTROLE" height="22px" label="mRessarcimentoSus.controle.btnAbrirReembolso.label" member="BTN_ABRIR_REEMBOLSO" name="btnAbrirReembolso" width="200px"/>
+                                <button action="WHEN-MOUSE-CLICK" block="CONTROLE" height="22px" label="mRessarcimentoSus.controle.btnMarcartodos.label" member="BTN_MARCAR_TODOS" name="btnMarcarTodos" width="120px"/>
+                                <button action="WHEN-MOUSE-CLICK" block="CONTROLE" height="22px" label="mRessarcimentoSus.controle.btnDesmarcarTodos.label" member="BTN_DESMARCAR_TODOS" name="btnDesmarcarTodos" width="120px"/>
+                            </flowlayout>
+                        </panel>
+                        <panel style="ui-panel-align-right ui-box-horizontal" width="100%">
+                            <flowlayout orientation="horizontal">
+                                <textfield enabled="false" height="100%" name="squareCriticaVermelho" style="vermelho ui-noborder" textalign="center" width="5px"/>
+                                <text enabled="false" fontsize="10px" name="textCriticaVermelho" textalign="left">mRessarcimentoSus.uiResourceKey.1.text</text>
+                                <textfield height="100%" name="squareCriticaAmarelo" style="amarelo ui-noborder" textalign="center" width="5px"/>
+                                <text enabled="false" fontsize="10px" name="textCriticaAmarelo" textalign="left">mRessarcimentoSus.uiResourceKey.2.text</text>
+                                <textfield height="100%" name="squareCriticaVerde" style="verde ui-noborder" textalign="center" width="5px"/>
+                                <text enabled="false" fontsize="10px" name="textCriticaVerde" textalign="left">mRessarcimentoSus.uiResourceKey.3.text</text>
+                                <textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dspSumVlAtendimentos.label" labelalign="start" labelposition="top" member="DSP_SUM_VL_ATENDIMENTOS" name="dspSumVlAtendimentos" style="MVMask025" textalign="right" width="130px"/>
+                            </flowlayout>
+                        </panel>
+                    </flowlayout>
+                </panel>
+            </flowlayout>
+        </panel>
+    </panel>
+</config>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:a="urn:schemas:morphis:frames:addition" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="RESSARCIMENTO_SUS"/>
+	<interactionblock name="CONTROLE"/>
+	<interactionblock name="HISTORICO_RESSARCIMENTO_SUS"/>
+	<panel class="ContentCanvas" name="CNV_PRINCIPAL" style="ui-content-full">
+		<panel bottom="10px" left="10px" right="10px" style="ui-box-vertical" top="10px">
+			<flowlayout orientation="vertical">
+				<panel height="90px" style="ui-box-horizontal" width="100%">
+					<framepanel label="mRessarcimentoSus.uiResourceKey.1.panelCnvPrincipal.title" style="MVTituloDescricao" height="100%" width="100%">
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.cdRessarcimentoSus.label" labelalign="start" labelposition="top" left="10px" maxlength="22" member="CD_RESSARCIMENTO_SUS" name="cdRessarcimentoSus" textalign="right" top="20px" width="80px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="String" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dsOficio.label" labelalign="start" labelposition="top" left="100px" maxlength="30" member="DS_OFICIO" name="dsOficio" required="true" top="20px" width="430px"/>
+						<calendar block="RESSARCIMENTO_SUS" datatype="Date" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dtOficio.label" labelalign="start" labelposition="top" left="540px" maxlength="1" member="DT_OFICIO" name="dtOficio" required="true" style="MVDataCompleta" top="20px" width="140px"/>
+						<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="Number" height="22px" label="mRessarcimentoSus.ressarcimentoSus.vlOficio.label" labelalign="start" labelposition="top" maxlength="10" member="VL_OFICIO" name="vlOficio" required="true" right="10px" style="MVMask025" textalign="right" top="20px" validation="server" width="140px"/>
+						<textbox block="RESSARCIMENTO_SUS" bottom="10px" case="upper" datatype="String" label="mRessarcimentoSus.ressarcimentoSus.nrProcessoOficio.label" labelalign="start" labelposition="top" left="10px" maxlength="1000" member="NR_PROCESSO_OFICIO" name="nrProcessoOficio" required="true" textalign="left" top="55px" width="350px"/>
+						<calendar block="RESSARCIMENTO_SUS" bottom="10px" datatype="Date" label="mRessarcimentoSus.ressarcimentoSus.dtCompetInicial.label" labelalign="start" labelposition="top" left="370px" maxlength="1" member="DT_COMPET_INICIAL" name="dtCompetInicial" required="true" style="MVDataAbreviada" top="55px" width="140px"/>
+						<calendar block="RESSARCIMENTO_SUS" bottom="10px" datatype="Date" label="mRessarcimentoSus.ressarcimentoSus.dtCompetFinal.label" labelalign="start" labelposition="left" left="540px" maxlength="1" member="DT_COMPET_FINAL" name="dtCompetFinal" required="true" style="MVDataAbreviada" top="55px" validation="server" width="140px"/>
+						<textbox block="RESSARCIMENTO_SUS" bottom="10px" case="upper" datatype="Number" label="mRessarcimentoSus.ressarcimentoSus.cdFaturaAbi.label" labelalign="start" labelposition="top" member="CD_FATURA_ABI" name="cdFaturaAbi" right="10px" textalign="right" top="55px" visible="false" width="140px"/>
+					</framepanel>
+				</panel>
+				<panel height="100%" style="ui-box-vertical" width="100%">
+					<flowlayout orientation="vertical">
+						<include src="br/com/mv/soul/mvsaude/forms/MRessarcimentoSus/views/PanelTabPrincipal"/>
+					</flowlayout>
+				</panel>
+				<panel a:gaphorizontal="20px" style="ui-panel-align-center ui-panel-align-middle ui-box-horizontal" width="100%">
+					<flowlayout orientation="horizontal">
+						<button action="btn_validar_click" block="CONTROLE" label="mRessarcimentoSus.controle.btnValidar.label" member="BTN_VALIDAR" name="btnValidar" width="150px"/>
+						<button action="btn_criar_reembolso_click" block="CONTROLE" label="mRessarcimentoSus.controle.btnCriarReembolso.label" member="BTN_CRIAR_REEMBOLSO" name="btnCriarReembolso" width="150px"/>
+						<button action="btn_atendimentos_click" block="CONTROLE" label="mRessarcimentoSus.controle.btnAtendimentos.label" member="BTN_ATENDIMENTOS" name="btnAtendimentos" width="150px"/>
+					</flowlayout>
+				</panel>
+				<panel style="ui-box-horizontal" height="50px" width="100%">
+						<framepanel label="mRessarcimentoSus.uiResourceKey.2.title" style="MVTituloDescricao" height="100%" width="100%">
+							<panel a:paddingbottom="10px" a:paddingleft="10px" a:paddingright="10px" a:paddingtop="20px" style="ui-box-horizontal ui-content-full-width">
+								<flowlayout orientation="horizontal">
+									<panel style="ui-panel-align-right ui-box-horizontal" width="100%">
+										<flowlayout orientation="horizontal">
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="String" height="22px" label="mRessarcimentoSus.ressarcimentoSus.cdUsuarioInclusao.label" labelalign="start" labelposition="top" maxlength="30" member="CD_USUARIO_INCLUSAO" name="cdUsuarioInclusao" readonly="true" width="250px"/>
+											<calendar labeloffset="-4px" block="RESSARCIMENTO_SUS" datatype="Date" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dhInclusao.label" labelalign="start" labelposition="top" member="DH_INCLUSAO" name="dhInclusao" readonly="true" style="MVDataHora" width="120px"/>
+										</flowlayout>
+									</panel>
+									<panel style="ui-panel-align-left ui-box-horizontal" width="100%">
+										<flowlayout orientation="horizontal">
+											<textbox block="RESSARCIMENTO_SUS" case="upper" datatype="String" height="22px" label="mRessarcimentoSus.ressarcimentoSus.cdUsuarioAlteracao.label" labelalign="start" labelposition="top" maxlength="30" member="CD_USUARIO_ALTERACAO" name="cdUsuarioAlteracao" readonly="true" width="250px"/>
+											<calendar labeloffset="-4px" block="RESSARCIMENTO_SUS" datatype="Date" height="22px" label="mRessarcimentoSus.ressarcimentoSus.dhUltimaAlteracao.label" labelalign="start" labelposition="top" member="DH_ULTIMA_ALTERACAO" name="dhUltimaAlteracao" readonly="true" style="MVDataHora" width="120px"/>
+										</flowlayout>
+									</panel>
+								</flowlayout>
+							</panel>
+						</framepanel>
+				</panel>
+			</flowlayout>
+		</panel>
+	</panel>
+</config>

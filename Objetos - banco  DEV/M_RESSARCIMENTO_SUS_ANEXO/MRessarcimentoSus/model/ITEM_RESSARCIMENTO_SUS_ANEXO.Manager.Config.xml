@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="ITEM_RESSARCIMENTO_SUS_ANEXO.Manager.Config" name="ITEM_RESSARCIMENTO_SUS_ANEXO" queryOnly="true">
+		<kind>Query</kind>
+		<items>
+			<item name="CD_ITEM_RESSARCIMENT_SUS_ANEXO" logicalName="cdItemRessarcimentSusAnexo" type="java.math.BigDecimal" physicalName="CD_ITEM_RESSARCIMENT_SUS_ANEXO" key="true">
+				<value>
+					<sequence>DBAPS.SEQ_ITEM_RESSARCIMEN_SUS_ANEXO</sequence>
+				</value>
+			</item>
+			<item name="CD_RESSARCIMENTO_SUS_ANEXO" logicalName="cdRessarcimentoSusAnexo" type="java.math.BigDecimal" physicalName="CD_RESSARCIMENTO_SUS_ANEXO">
+			</item>
+			<item name="NM_UPS" logicalName="nmUps" type="java.lang.String" physicalName="NM_UPS">
+			</item>
+			<item name="NM_MUNICIPIO" logicalName="nmMunicipio" type="java.lang.String" physicalName="NM_MUNICIPIO">
+			</item>
+			<item name="CD_UF" logicalName="cdUf" type="java.lang.String" physicalName="CD_UF">
+			</item>
+			<item name="NR_COMPETENCIA" logicalName="nrCompetencia" type="java.lang.String" physicalName="NR_COMPETENCIA">
+			</item>
+			<item name="TP_ATENDIMENTO" logicalName="tpAtendimento" type="java.lang.String" physicalName="TP_ATENDIMENTO">
+			</item>
+			<item name="NR_ATENDIMENTO" logicalName="nrAtendimento" type="java.math.BigDecimal" physicalName="NR_ATENDIMENTO">
+			</item>
+			<item name="DT_INICIO" logicalName="dtInicio" type="java.util.Date" physicalName="DT_INICIO">
+			</item>
+			<item name="DT_FIM" logicalName="dtFim" type="java.util.Date" physicalName="DT_FIM">
+			</item>
+			<item name="CD_CARATER" logicalName="cdCarater" type="java.math.BigDecimal" physicalName="CD_CARATER">
+			</item>
+			<item name="CD_BENEFICIARIO" logicalName="cdBeneficiario" type="java.lang.String" physicalName="CD_BENEFICIARIO">
+			</item>
+			<item name="CD_CCO" logicalName="cdCco" type="java.math.BigDecimal" physicalName="CD_CCO">
+			</item>
+			<item name="DT_NASC_BENEFICIARIO" logicalName="dtNascBeneficiario" type="java.util.Date" physicalName="DT_NASC_BENEFICIARIO">
+			</item>
+			<item name="CD_PROCEDIMENTO" logicalName="cdProcedimento" type="java.math.BigDecimal" physicalName="CD_PROCEDIMENTO">
+			</item>
+			<item name="DS_PROCEDIMENTO" logicalName="dsProcedimento" type="java.lang.String" physicalName="DS_PROCEDIMENTO">
+			</item>
+			<item name="VL_PROCEDIMENTO" logicalName="vlProcedimento" type="java.math.BigDecimal" physicalName="VL_PROCEDIMENTO">
+			</item>
+			<item name="DS_ATENDIMENTO" logicalName="dsAtendimento" type="java.lang.String" physicalName="DS_ATENDIMENTO">
+			</item>
+			<item name="VL_TOTAL" logicalName="vlTotal" type="java.math.BigDecimal" physicalName="VL_TOTAL">
+			</item>
+			<item name="DSP_NM_ANEXO" logicalName="dspNmAnexo" type="java.lang.String" virtual="true">
+			</item>
+			<item name="DSP_CD_VALIDA_ITEM_RESS_SUS_ANEXO" logicalName="dspCdValidaItemRessSusAnexo" type="java.math.BigDecimal" virtual="true">
+			</item>
+			<item name="CD_RESSARCIMENTO_SUS" logicalName="cdRessarcimentoSus" type="java.math.BigDecimal" physicalName="CD_RESSARCIMENTO_SUS">
+			</item>
+			<item name="CD_REEMBOLSO" logicalName="cdReembolso" type="java.math.BigDecimal" physicalName="CD_REEMBOLSO">
+			</item>
+			<item name="NM_SEGURADO" logicalName="nmSegurado" type="java.lang.String" physicalName="NM_SEGURADO">
+			</item>
+			<item name="TP_VALIDACAO" logicalName="tpValidacao" type="java.lang.String" physicalName="TP_VALIDACAO">
+			</item>
+			<item name="CD_MATRICULA" logicalName="cdMatricula" type="java.math.BigDecimal" physicalName="CD_MATRICULA">
+			</item>
+			<item name="CD_MAT_ALTERNATIVA" logicalName="cdMatAlternativa" type="java.lang.String" physicalName="CD_MAT_ALTERNATIVA">
+			</item>
+			<item name="SN_CONFIRMAR" logicalName="snConfirmar" type="java.lang.String" physicalName="SN_CONFIRMAR">
+			</item>
+			<item name="TP_PROCEDIMENTO" logicalName="tpProcedimento" type="java.lang.String" physicalName="TP_PROCEDIMENTO">
+			</item>
+		</items>
+		<source><![CDATA[SELECT DISTINCT IRSA.CD_ITEM_RESSARCIMENT_SUS_ANEXO,
+                IRSA.CD_RESSARCIMENTO_SUS_ANEXO,
+                IRSA.NM_UPS,
+                IRSA.NM_MUNICIPIO,
+                IRSA.CD_UF,
+                IRSA.NR_COMPETENCIA,
+                IRSA.TP_ATENDIMENTO,
+                IRSA.NR_ATENDIMENTO,
+                IRSA.DT_INICIO,
+                IRSA.DT_FIM,
+                IRSA.CD_CARATER,
+                U.CD_MATRICULA,
+                U.CD_MAT_ALTERNATIVA,
+                U.NM_SEGURADO,
+                IRSA.CD_BENEFICIARIO,
+                IRSA.CD_CCO || IRSA.NR_DIV_CCO CD_CCO,
+                IRSA.DT_NASC_BENEFICIARIO,
+                IRSA.CD_PROCEDIMENTO,
+                IRSA.DS_PROCEDIMENTO,
+                IRSA.VL_PROCEDIMENTO,
+                IRSA.DS_ATENDIMENTO,
+                IRSA.VL_TOTAL,
+                IRSA.CD_RESSARCIMENTO_SUS,
+                IRSA.CD_REEMBOLSO,
+                VIRSA.TP_VALIDACAO,
+                IRSA.sn_confirmar,
+                IRSA.tp_procedimento
+
+  FROM (
+        SELECT CD_ITEM_RESSARCIMENT_SUS_ANEXO,
+               CD_RESSARCIMENTO_SUS_ANEXO,
+               NM_UPS,
+               NM_MUNICIPIO,
+               CD_UF,
+               NR_COMPETENCIA,
+               TP_ATENDIMENTO,
+               NR_ATENDIMENTO,
+               DT_INICIO,
+               DT_FIM,
+               CD_CARATER,
+               CD_BENEFICIARIO,
+               LPad(SubStr(CD_CCO, 0, Length(CD_CCO)-2), 10, 0) CD_CCO,
+               LPad(SubStr(CD_CCO, Length(CD_CCO)-1, 2), 2, 0) NR_DIV_CCO,
+               DT_NASC_BENEFICIARIO,
+               CD_PROCEDIMENTO,
+               DS_PROCEDIMENTO,
+               VL_PROCEDIMENTO,
+               DS_ATENDIMENTO,
+               VL_TOTAL,
+               CD_RESSARCIMENTO_SUS,
+               CD_REEMBOLSO,
+               SN_CONFIRMAR,
+               TP_PROCEDIMENTO
+          FROM DBAPS.ITEM_RESSARCIMENTO_SUS_ANEXO
+         WHERE CD_RESSARCIMENTO_SUS =:P_CD_RESSARCIMENTO_SUS
+        ) IRSA
+        LEFT JOIN DBAPS.USUARIO U ON IRSA.CD_CCO = LPad(U.CD_CCO, 10, 0) AND IRSA.NR_DIV_CCO = LPad(U.NR_DIV_CCO, 2, 0)
+        LEFT JOIN DBAPS.VALIDA_ITEM_RESS_SUS_ANEXO VIRSA ON IRSA.CD_ITEM_RESSARCIMENT_SUS_ANEXO = VIRSA.CD_ITEM_RESSARCIMENT_SUS_ANEXO
+        ORDER BY IRSA.CD_ITEM_RESSARCIMENT_SUS_ANEXO ASC]]></source>
+		
+		<adapterClass>br.com.mv.soul.mvsaude.forms.MRessarcimentoSus.model.ItemRessarcimentoSusAnexoAdapter</adapterClass>
+		
+		<queryAllRecords>true</queryAllRecords>
+
+		
+		
+		
+	</manager>
+</b:beans>

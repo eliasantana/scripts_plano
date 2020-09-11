@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov Name="LOV_TIP_DOC" Title="mRessarcimentoSus.lovTipDoc.title" Width="400" Height="500" RecordGroup="RG_TIP_DOC">
+        <Columns>
+            <Column DataMember="CD_TIP_DOC" Title="mRessarcimentoSus.lovTipDoc.cdTipDoc.title" Width="50" ReturnItem="RESSARCIMENTO_SUS.CD_TIP_DOC"/>
+            <Column DataMember="DS_TIP_DOC" Title="mRessarcimentoSus.lovTipDoc.dsTipDoc.title" Width="100" ReturnItem="RESSARCIMENTO_SUS.DSP_TIP_DOC"/>
+        </Columns>
+    </Lov>
+    <Lov Name="LOV_FORNECEDOR" Title="mRessarcimentoSus.lovFornecedor.title" Width="400" Height="500" RecordGroup="RG_FORNECEDOR">
+        <Columns>
+            <Column DataMember="CD_FORNECEDOR" Title="mRessarcimentoSus.lovFornecedor.cdFornecedor.title" Width="50" ReturnItem="RESSARCIMENTO_SUS.CD_FORNECEDOR"/>
+            <Column DataMember="NM_FORNECEDOR" Title="mRessarcimentoSus.lovFornecedor.nmFornecedor.title" Width="100" ReturnItem="RESSARCIMENTO_SUS.DSP_NM_FORNECEDOR"/>
+        </Columns>
+    </Lov>
+</Lovs>

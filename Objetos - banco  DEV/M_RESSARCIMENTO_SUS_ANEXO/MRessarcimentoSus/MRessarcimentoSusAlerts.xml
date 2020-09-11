@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="CFG_SYSTEM_ERROR" Title="" Type="ERROR">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="mRessarcimentoSus.cfgSystemError.btn1.label" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="CFG_WARNING_A" Title="" Type="WARNING">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="mRessarcimentoSus.cfgWarningA.btn1.label" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="CFG_INFORMATION" Title="" Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="mRessarcimentoSus.cfgInformation.btn1.label" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="CFG_ERROR" Title="" Type="ERROR">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="mRessarcimentoSus.cfgError.btn1.label" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+
